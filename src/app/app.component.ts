@@ -1,32 +1,90 @@
 import { Component } from '@angular/core';
-import { Libro } from './common/types';
+import { Book } from './common/types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  books: Book[];
 
-  libros: Libro[];
-
-  constructor(){
-     this.libros = [
-      {id:1,titulo:'El retrato de Dorian Gray', autor:'Oscar Wilde',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:2,titulo:'Frankenstein', autor:'Mary Shelley',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:3,titulo:'Orgullo y prejuicio', autor:'Jane Austen',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:4,titulo:'Drácula', autor:'Bram Stoker',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:5,titulo:'El maravilloso mago de Oz', autor:'L. Frank Baum',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:6,titulo:'Don Quijote de la Mancha', autor:' Miguel de Cervantes Saavedra',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:7,titulo:'La máquina del tiempo', autor:'H. G. Wells',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:8,titulo:'El conde de Montecristo', autor:'Alexandre Dumas',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:9,titulo:'Mujercitas', autor:'Louisa M. Alcott',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."},
-      {id:10,titulo:'La isla del tesoro', autor:'Robert Louis Stevenson',descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."}
-    ]
+  constructor() {
+    this.books = [
+      {
+        id: 1,
+        title: 'El retrato de Dorian Gray',
+        author: 'Oscar Wilde',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 2,
+        title: 'Frankenstein',
+        author: 'Mary Shelley',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 3,
+        title: 'Orgullo y prejuicio',
+        author: 'Jane Austen',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 4,
+        title: 'Drácula',
+        author: 'Bram Stoker',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 5,
+        title: 'El maravilloso mago de Oz',
+        author: 'L. Frank Baum',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 6,
+        title: 'Don Quijote de la Mancha',
+        author: ' Miguel de Cervantes Saavedra',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 7,
+        title: 'La máquina del tiempo',
+        author: 'H. G. Wells',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 8,
+        title: 'El conde de Montecristo',
+        author: 'Alexandre Dumas',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 9,
+        title: 'Mujercitas',
+        author: 'Louisa M. Alcott',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+      {
+        id: 10,
+        title: 'La isla del tesoro',
+        author: 'Robert Louis Stevenson',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      },
+    ];
   }
 
-  mostrarAutor(_libro:Libro){
-    alert( ` ${_libro.titulo} fue escrito por ${_libro.autor} ` )
+  showAuthor(_book: Book) {
+    alert(` ${_book.title} fue escrito por ${_book.author} `);
   }
-
 }
