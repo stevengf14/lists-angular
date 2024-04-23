@@ -1,6 +1,20 @@
 <ul>
-  <li *ngFor="let book of books">
-    {{ book.title }}
+  <li
+    *ngFor="
+      let book of books;
+      index as i;
+      first as isFirst;
+      last as isLast;
+      odd as isOdd;
+      even as isEven
+    "
+  >
+    {{ book.title }} - {{ book.author }}
+    <span *ngIf="i === 5">Outstanding</span>
+    <span *ngIf="isFirst">Outstanding</span>
+    <span *ngIf="isLast">Outstanding</span>
+    <span *ngIf="esOdd">Outstanding</span>
+    <span *ngIf="esEven">Outstanding</span>
   </li>
 </ul>
 
