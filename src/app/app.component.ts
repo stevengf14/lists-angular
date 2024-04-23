@@ -85,6 +85,6 @@ export class AppComponent {
   }
 
   showAuthor(_book: Book) {
-    alert(` ${_book.title} fue escrito por ${_book.author} `);
+    alert(` ${_book.title} was written by ${_book.author} `);
   }
 }

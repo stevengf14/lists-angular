@@ -9,7 +9,8 @@
       even as isEven
     "
   >
-    {{ book.title }} - {{ book.author }}
+    <a (click)="showAuthor(book)">{{ book.title }}</a>
+
     <span *ngIf="i === 5">Outstanding</span>
     <span *ngIf="isFirst">Outstanding</span>
     <span *ngIf="isLast">Outstanding</span>
